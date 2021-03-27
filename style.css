@@ -1,0 +1,89 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex: 1;
+    }
+    
+    .slide {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transition: flex 1s ease 0.2s;
+        flex: 1;
+    }
+    
+    .playstation {
+        background: #1a4f94;
+    }
+    
+    .playstation::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url('ps.jpg');
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -1;
+    }
+    
+    .xbox {
+        background: black;
+    }
+    
+    .xbox::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url('xbox.jpg');
+        background-size: cover;
+        opacity: 0.5;
+        z-index: -1;
+    }
+    
+    .slide h1 {
+        font-size: 70px;
+        line-height: 1.6;
+        color: white;
+        margin: 5px;
+    }
+    
+    .btn {
+        cursor: pointer;
+        border: 2px solid white;
+        padding: 20px 40px;
+        margin: 10px;
+        background: transparent;
+        color: white;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+    .btn-blue:hover {
+        background: #1a4f94;
+    }
+    
+    .btn-green:hover {
+        background: green;
+    }
+    
+    .slide:hover {
+        flex: 2;
+    }
+    
+    .slide-open {
+        flex: 2;
+    }
